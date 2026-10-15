@@ -58,11 +58,11 @@ def mostrar_usuarios(usuarios):
 
 def seleccionar_ganador(usuarios):
     # Seleccionamos unha clave aleatoria do dicionario (entre 1 e 15)
-    codigo_gañador = random.choice(list(usuarios.keys()))
-    nome_gañador = usuarios[codigo_gañador]['nome']
+    codigo_ganador = random.choice(list(usuarios.keys()))
+    nome_ganador = usuarios[codigo_ganador]['nome']
     
     print("\n" + "=" * 60)
-    print(f"O usuario chamado {nome_gañador} foi o afortunado!")
+    print(f"O usuario chamado {nome_ganador} foi o afortunado!")
     print("=" * 60)
 
 # --- Execución do programa ---
