@@ -14,7 +14,7 @@
 from faker import Faker
 import random
 
-def xerar_usuarios_ficticios(cantidad=15):
+def usuarios_ficticios(cantidad=15):
     # Inicializamos Faker configurado para locale 'es_ES' (España) para obter datos en castelán/galego
     # Se queres datos específicamente en galego, Faker non ten un locale 'gl_ES' oficial moi completo,
     # polo que 'es_ES' é a mellor opción para nomes e formatos cercanos.
@@ -56,7 +56,7 @@ def mostrar_usuarios(usuarios):
         print(f"  Teléfono: {datos['telefono']}")
         print("-" * 30)
 
-def seleccionar_gañador(usuarios):
+def seleccionar_ganador(usuarios):
     # Seleccionamos unha clave aleatoria do dicionario (entre 1 e 15)
     codigo_gañador = random.choice(list(usuarios.keys()))
     nome_gañador = usuarios[codigo_gañador]['nome']
@@ -68,10 +68,10 @@ def seleccionar_gañador(usuarios):
 # --- Execución do programa ---
 if __name__ == "__main__":
     # 1. Xerar os datos
-    base_de_datos_usuarios = xerar_usuarios_ficticios(15)
+    base_de_datos_usuarios = usuarios_ficticios(15)
     
     # 2. Mostrar todos os usuarios
     mostrar_usuarios(base_de_datos_usuarios)
     
     # 3. Seleccionar e mostrar o gañador
-    seleccionar_gañador(base_de_datos_usuarios)
+    seleccionar_ganador(base_de_datos_usuarios)
